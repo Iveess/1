@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #c6b3ff; /* фоновий колір сторінки */
+        }
+
+        header {
+            background-color: #000; /* фоновий колір заголовку */
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            border-bottom: 3px solid #13004d; /* Change border color to #13004d */
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            background-color: #70609f; /* фоновий колір навігації */
+            padding: 0.5em;
+            border-bottom: 3px solid #13004d; /* Change border color to #13004d */
+            height: 100%; /* Зробити висоту навігаційного блоку такою самою, як і у зображення */
+        }
+
+        nav img {
+            margin-right: 10px; /* Додатковий відступ між зображенням і текстом */
+            height: 100%; /* Зробити висоту зображення такою самою, як і у навігаційному блоку */
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            margin: 0.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #8d7ab9; /* фоновий колір навігації при наведенні */
+        }
+
+        .main-image {
+            position: relative;
+            border-bottom: 3px solid #13004d; /* Add bottom border to the image */
+        }
+
+        .main-image img {
+            width: 100%;
+            max-height: 700px;
+            object-fit: cover;
+            margin: 0;
+            display: block;
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(19, 0, 77, 0.5); /* semi-transparent background color */
+            padding: 20px;
+            color: #fff;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        section {
+            padding: 20px;
+            background-color: #c6b3ff;
+            border-bottom: 3px solid #13004d; /* Change border color to #13004d */
+        }
+
+        /* Додайте новий клас для стилізації блоків у секціях */
+.section-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Стилізація для лівого блока з текстом */
+.section-text {
+    flex: 1; /* Займати доступне простір у секції */
+}
+
+/* Стилізація для правого блока з картинкою */
+.section-image {
+    flex: 1; /* Займати доступне простір у секції */
+    }
+
+/* Стилізація для картинки в правому блоку */
+.section-image img {
+    width: 500px;
+    max-height: 500px;
+    object-fit: cover;
+    border: 2px solid black; /* Додаємо бордер навколо зображення */
+    border-radius: 10px;
+
+}
+
+#section1 p {
+    font-size: 36px; /* Наприклад, 18px - встановіть бажаний розмір */
+}
+
+#section2 p {
+    font-size: 36px; /* Наприклад, 18px - встановіть бажаний розмір */
+}
+
+#section2 .section-text {
+    text-align: right;
+}
+
+        footer {
+            background-color: #70609f;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position:relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+.div1 {
+    padding: 15px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 10px;    
+}
+
+#contacts {
+    display: flex;
+    justify-content: space-around; /* Рівномірно розподілити елементи по ширині */
+    align-items: center; /* Вирівняти елементи по центру вертикально */
+    background-color: #c6b3ff; /* Колір фону для правої частини */
+    border-left: 15px solid #13004d; /* Додати білий бордер ліворуч */
+    padding: 20px; /* Додати відступ */
+  }
+
+  #contacts h2 {
+    text-align: center; /* Вирівнювання по центру */
+    color: black; /* Колір тексту */
+  }
+
+  #contacts p {
+    text-align: left; /* Вирівнювання ліворуч */
+    color: black; /* Колір тексту */
+  }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        
+    </header>
+
+    <nav>
+        <img src="https://i.imgur.com/IlF413d.png">
+        <a onclick="scrollToSection('home')">Головна</a>
+        <a onclick="scrollToSection('section1')">Розділ 1</a>
+        <a onclick="scrollToSection('section2')">Розділ 2</a>
+        <a onclick="scrollToSection('contacts')">Контакти</a>
+    </nav>
+
+    <div class="main-image">
+        <img src="https://cdn.thomasnet.com/insights-images/embedded-images/af9ef027-e3f9-4d33-9f3d-61b70d507af5/0bb97e4d-75b9-484d-b638-7728e891cac2/FullHD/shutterstock_182465732-min.jpg" alt="Ваш опис картинки">
+        <div class="text-overlay">
+            <h2>Модний Текстиль</h2>
+            <p>Продаж якісних тканин по всій Україні.</p>
+        </div>
+    </div>
+
+    <section id="section1" class="section-container">
+        <div class="section-text">
+            <h2>Про нас</h2>
+            <p>
+                Ласкаво просимо в "Модний Текстиль" – ваш перший вибір у світі якісних та стильних тканин! 
+                Наш магазин пропонує великий асортимент тканин для будь-яких творчих ідей та модних проектів. 
+                Ми прагнемо задовольнити ваші потреби в елегантних матеріалах, надаючи найвищу якість і розмаїття вибору. 
+                З "Модним Текстилем" кожен ваш шов або дизайн отримає особливий шарм і стане вираженням вашого стилю. 
+                Дозвольте нам допомогти вам зробити ваші творчі задуми реальністю!
+            </p>
+        </div>
+        <div class="div1">
+            <div class="section-image">
+                <img src="https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/35c5aeb3-f292-4582-bf5e-8b29182eb74e.jpeg" alt="Ваш опис картинки">
+            </div>
+        </div>
+    </section>
+
+    <section id="section2" class="section-container">
+        <div class="div1">
+            <div class="section-image">
+                <img src="https://blog.patra.com/wp-content/uploads/2014/07/Fabric_Rainbow_Colors-300x249.jpg" alt="Ваш опис картинки">
+            </div>
+        </div>
+        <div class="section-text">
+            <h2>Наші переваги</h2>
+            <p>"Магазин тканин 'Модний Текстиль' пропонує неперевершені можливості для вашої творчості та стилю. 
+                Наші переваги – великий асортимент високоякісних тканин для будь-яких модних проектів, найсучасніші тренди у світі текстилю, та особистий підхід до кожного клієнта. 
+                З нами кожен шов отримає неповторний шарм, а ваші ідеї стануть реальністю. Обирайте 'Модний Текстиль' – обирайте якість та стиль!"</p>
+        </div>
+    </section>
+
+    <section id="contacts" class="section-container">
+        <h2>Наші Контакти</h2>
+        <p>Номер телефону: +380(77)153-79-92</p>
+        <p>Наш телеграм: @LaboratornaRobota3</p>
+        <p>Наш інстаграм: @LaboratornaRobota3</p>
+    </section>
+    
+
+    <footer>
+        <p>&copy; Цей сайт розроблено для лабораторної роботи</p>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>

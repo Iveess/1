@@ -3,27 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторна робота №3</title>
+    <title>Модний текстиль</title>
+    <link rel="icon" type="image/x-icon" href="/26e75a75bb08b88c67776a1d904d1a9c.ico">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #c6b3ff; /* фоновий колір сторінки */
-        }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://i.imgur.com/mmeW1jf.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #c6b3ff; /* Фоновий колір на випадок, якщо зображення не завантажиться */
+}
+
 
         header {
             background-color: #000; /* фоновий колір заголовку */
             color: #fff;
             text-align: center;
-            padding: 1em;
+            padding: 0.2em;
             border-bottom: 3px solid #13004d; /* Change border color to #13004d */
         }
 
         nav {
             display: flex;
             align-items: center;
-            background-color: #70609f; /* фоновий колір навігації */
+            background: rgb(8,0,29);
+            background: linear-gradient(90deg, rgba(8,0,29,1) 0%, rgba(255,0,206,1) 30%, rgba(128,0,35,1) 56%, rgba(255,255,255,1) 75%, rgba(129,0,91,1) 88%);
             padding: 0.5em;
             border-bottom: 3px solid #13004d; /* Change border color to #13004d */
             height: 100%; /* Зробити висоту навігаційного блоку такою самою, як і у зображення */
@@ -76,8 +82,12 @@
 
         section {
             padding: 20px;
-            background-color: #c6b3ff;
             border-bottom: 3px solid #13004d; /* Change border color to #13004d */
+        }
+
+        .text-overlay h2,
+        .text-overlay p{
+            font-size: 60px;
         }
 
         /* Додайте новий клас для стилізації блоків у секціях */
@@ -139,20 +149,25 @@
     display: flex;
     justify-content: space-around; /* Рівномірно розподілити елементи по ширині */
     align-items: center; /* Вирівняти елементи по центру вертикально */
-    background-color: #c6b3ff; /* Колір фону для правої частини */
-    border-left: 15px solid #13004d; /* Додати білий бордер ліворуч */
+    background: rgb(8,0,29);
+background: linear-gradient(90deg, rgba(8,0,29,1) 0%, rgba(235,82,158,1) 14%, rgba(128,0,35,1) 28%, rgba(255,255,255,1) 43%, rgba(255,0,206,1) 53%, rgba(129,0,91,1) 67%, rgba(129,14,51,1) 79%, rgba(129,26,99,1) 89%, rgba(0,0,0,1) 100%);
     padding: 20px; /* Додати відступ */
   }
 
-  #contacts h2 {
-    text-align: center; /* Вирівнювання по центру */
-    color: black; /* Колір тексту */
-  }
+  #contacts h2,
+#contacts p {
+  color: white; /* Білий колір тексту */
+  font-size: 1.6em; /* Збільшення розміру тексту (можна змінити за потребою) */
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 0 #000; /* Чорна обводка */
+}
 
-  #contacts p {
-    text-align: left; /* Вирівнювання ліворуч */
-    color: black; /* Колір тексту */
-  }
+  .section-text h2,
+.section-text p {
+  display: inline-block; /* Робимо блоком, щоб ширина підлаштовувалась до контенту */
+  background-color: rgba(255, 255, 255, 0.25); /* Білий колір з 75% прозорістю */
+  padding: 10px; /* Відступи навколо тексту */
+  margin: 5px 0; /* Можете змінити відступи, якщо потрібно */
+}
 
     </style>
 </head>
@@ -163,10 +178,10 @@
     </header>
 
     <nav>
-        <img src="https://i.imgur.com/IlF413d.png">
+        <img src="https://i.imgur.com/VsATn9W.png">
         <a onclick="scrollToSection('home')">Головна</a>
-        <a onclick="scrollToSection('section1')">Розділ 1</a>
-        <a onclick="scrollToSection('section2')">Розділ 2</a>
+        <a onclick="scrollToSection('section1')">Про нас</a>
+        <a onclick="scrollToSection('section2')">Переваги</a>
         <a onclick="scrollToSection('contacts')">Контакти</a>
     </nav>
 
@@ -212,14 +227,14 @@
 
     <section id="contacts" class="section-container">
         <h2>Наші Контакти</h2>
-        <p>Номер телефону: +380(77)153-79-92</p>
-        <p>Наш телеграм: @LaboratornaRobota3</p>
-        <p>Наш інстаграм: @LaboratornaRobota3</p>
+        <p>Номер телефону: +380(33)333-33-33</p>
+        <p>Наш телеграм: @ExampleTelegram</p>
+        <p>Наш інстаграм: @ExampleInstagram</p>
     </section>
     
 
     <footer>
-        <p>&copy; Цей сайт розроблено для лабораторної роботи</p>
+        <p>&copy; Цей сайт не для розроблено комерційної діяльності</p>
     </footer>
 
     <script>
